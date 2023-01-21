@@ -1,5 +1,9 @@
 <?php
+use App\Http\Controllers\heroesController;
+use App\Http\Controllers\itemsController;
+use App\Http\Controllers\enemiesController;
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,13 +17,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/   
+
+// Route::get('/admin/{name?}','AdminController@index');
+
+Route::group(['prefix'=> 'admin'],function(){
+    Route::get('heroes',[heroesController::class,'index'])->name('admin.heroes');
+    Route::get('items',[itemsController::class,'index'])->name('admin.items');
+    Route::get('enemies',[enemiesController::class,'index'])->name('admin.enemies');
+    Route::get('/',[AdminController::class,'index'])->name('admin');
 });
-Route::get('/home/{name?}',function($name=null){
-    if($name==null){
-        return "Bienvenido";
-    }else{
-       return view('home',['name'=>$name]);
-    }
-})->where('name','[A-Za-z]+');
+
+
+
+
