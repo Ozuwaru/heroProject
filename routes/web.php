@@ -29,7 +29,8 @@ Route::group(['prefix'=> 'admin'],function(){
     Route::get('enemies',[enemiesController::class,'index'])->name('admin.enemies');
     Route::get('/',[AdminController::class,'index'])->name('admin');
 });
+/*
 
 
-
+*/
 
