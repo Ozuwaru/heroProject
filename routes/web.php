@@ -24,8 +24,21 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/admin/{name?}','AdminController@index');
 
 Route::group(['prefix'=> 'admin'],function(){
-    Route::get('heroes',[heroesController::class,'index'])->name('admin.heroes');
-    Route::get('items',[itemsController::class,'index'])->name('admin.items');
+
+    Route::resource('heroes',HeroesController::class);
+    /*Route::group(['prefix'=> 'heroes'],function(){
+        Route::get('/',[heroesController::class,'index'])->name('admin.heroes');
+        Route::get('/create',[heroesController::class,'create'])->name('admin.heroes.create');
+        Route::post('/store',[heroesController::class,'store'])->name('admin.heroes.store');
+        Route::get('/edit/{id}',[heroesController::class,'edit'])->name('admin.heroes.edit');
+        Route::post('/update/{id}',[heroesController::class,'update'])->name('admin.heroes.update');
+        Route::delete('/destroy/{id}',[heroesController::class,'destroy'])->name('admin.heroes.destroy');
+
+
+    });*/
+
+    //Route::get('items',[itemsController::class,'index'])->name('admin.items');
+    Route::resource('items',itemsController::class);
     Route::get('enemies',[enemiesController::class,'index'])->name('admin.enemies');
     Route::get('/',[AdminController::class,'index'])->name('admin');
 });

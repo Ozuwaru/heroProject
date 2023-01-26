@@ -13,17 +13,17 @@
 
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="{{route('admin.heroes');}}" class="nav-link">Heroes</a>
+                    <a href="{{route('heroes.index');}}" class="nav-link">Heroes</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('admin.items');}}" class="nav-link">Items</a>
+                    <a href="{{route('items.index');}}" class="nav-link">Items</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{route('admin.enemies');}}" class="nav-link">Enemigos</a>
                 </li>
             </ul>
     </nav>
-    <div class="continer">
+    <div class="container" style="margin-top: 10px">
         @yield('content')
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
