@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix'=> 'admin'],function(){
 
-    Route::resource('heroes',HeroesController::class);
+    Route::resource('heroes',heroesController::class);
     /*Route::group(['prefix'=> 'heroes'],function(){
         Route::get('/',[heroesController::class,'index'])->name('admin.heroes');
         Route::get('/create',[heroesController::class,'create'])->name('admin.heroes.create');
@@ -39,7 +39,7 @@ Route::group(['prefix'=> 'admin'],function(){
 
     //Route::get('items',[itemsController::class,'index'])->name('admin.items');
     Route::resource('items',itemsController::class);
-    Route::get('enemies',[enemiesController::class,'index'])->name('admin.enemies');
+    Route::resource('enemies',enemiesController::class);
     Route::get('/',[AdminController::class,'index'])->name('admin');
 });
 /*

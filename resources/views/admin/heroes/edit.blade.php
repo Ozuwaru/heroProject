@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-    <h2>Editar heroe</h2>
+    <h2>Editar heroe - {{$hero->name}}</h2>
     <form action="{{Route('heroes.update',['hero'=>$hero->id])}}" method="post">
         @csrf
         @method('PUT')

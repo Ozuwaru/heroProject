@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-    <h2>Editar items</h2>
+    <h2>Editar item - <?php echo $item->name?></h2>
     <form action="{{Route('items.update',['item'=>$item->id])}}" method="post">
         @csrf
         @method('PUT')

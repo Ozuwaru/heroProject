@@ -19,7 +19,7 @@
                     <a href="{{route('items.index');}}" class="nav-link">Items</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('admin.enemies');}}" class="nav-link">Enemigos</a>
+                    <a href="{{route('enemies.index');}}" class="nav-link">Enemigos</a>
                 </li>
             </ul>
     </nav>
