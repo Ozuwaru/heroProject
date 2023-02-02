@@ -50,7 +50,7 @@ class BSController extends Controller
                         $hero->def+=random_int($hero->level->stat/2,$hero->level->stat);
                         $hero->luck+=random_int($hero->level->stat/2,$hero->level->stat);
                         $hero->coins+=random_int($hero->level->stat/2,$hero->level->stat);
-
+                        
                     }
                     
                     $hero->save();
