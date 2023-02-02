@@ -18,11 +18,14 @@ class LevelsTableSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
         DB::table('levels')->truncate();
         $xp=100;
+        $stat=2;
         for($i=0;$i<10;$i++){
             $xp *=2;
             DB::table('levels')->insert([
-                'xp'=>$xp
+                'xp'=>$xp,
+                'stat'=>$stat
             ]);
+            $stat*=2;
         }
         
     }

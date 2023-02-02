@@ -4,6 +4,7 @@ use App\Http\Controllers\itemsController;
 use App\Http\Controllers\enemiesController;
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BSController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,6 +42,7 @@ Route::group(['prefix'=> 'admin'],function(){
     Route::resource('items',itemsController::class);
     Route::resource('enemies',enemiesController::class);
     Route::get('/',[AdminController::class,'index'])->name('admin');
+    Route::resource('bs', BSController::class);
 });
 /*
 

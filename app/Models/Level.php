@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class level extends Model
 {
     use HasFactory;
+    public function heroes(){
+        return $this->hasMany("app\Models\Hero");
+    }
 }

@@ -11,5 +11,9 @@ class hero extends Model
     /*foreach($heroes as $hero){
         echo "{$hero->hp} <br>";
     }*/
+    
     use HasFactory;
+    public function level(){
+        return $this->hasOne("App\Models\Level",'id','level_id');
+    }
 }

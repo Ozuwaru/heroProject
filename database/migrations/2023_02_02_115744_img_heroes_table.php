@@ -13,10 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('levels', function (Blueprint $table) {
-            $table->id();
-            $table->integer('xp');
-            $table->integer('stat');
+        Schema::table('heroes', function (Blueprint $table) {
+            $table->string('img_path')->nullable();
         });
     }
 
@@ -27,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('levels');
+        Schema::table('heroes', function (Blueprint $table) {
+            //
+        });
     }
 };
