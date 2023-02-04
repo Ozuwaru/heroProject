@@ -78,8 +78,11 @@ class BSController extends Controller
             array_push($events,$ev);
         }
         return  ['events'=>$events,
-        'hero'=>$hero,
-        'enemy'=>$enemy];
+        'hero'=>$hero->name,
+        'enemy'=>$enemy->name,
+        'heroAvatar'=>$hero->img_path,
+        'enemyAvatar'=>$enemy->img_path
+        ];
     }
 
 

@@ -2,7 +2,7 @@
 @section('content')
 
     <h2>Crear nuevo Item</h2>
-    <form action="{{Route('items.store')}}" method="POST">
+    <form action="{{Route('items.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
 
         @include('admin.form')

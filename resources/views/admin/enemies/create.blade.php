@@ -14,10 +14,7 @@
             <input type="number" class="form-control" id="xp" name="xp" placeholder="Ingrese las monedas"required>
         </div>
 
-        <div class="form-group">
-            <label for="img_path">Imagen</label>
-            <input type="file" class="form-control" name="img_path" id="img_path">
-        </div>
+
         <button type="submit" class="btn btn-primary">Crear</button>
     </form>
     

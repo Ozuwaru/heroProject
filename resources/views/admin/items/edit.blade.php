@@ -2,7 +2,7 @@
 @section('content')
 
     <h2>Editar item - <?php echo $item->name?></h2>
-    <form action="{{Route('items.update',['item'=>$item->id])}}" method="post">
+    <form action="{{Route('items.update',['item'=>$item->id])}}" method="post" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <?php
