@@ -23,14 +23,14 @@
 
     <div class="row text-center text-white mt-2">
         <div class="col-5 bg-primary">
-            <h2>{{$hero}}</h2>
+            <img src="{{asset('images/heroes/'.$heroAvatar)}}" height="100">
             
         </div>
         <div class="col bg-warning text-dark ">
             <h2>VS</h2>
         </div>
         <div class="col-5 bg-danger">
-            <h2>{{$enemy}}</h2>
+            <img src="{{asset('images/enemies/'.$enemyAvatar)}}" alt="enemigo" height="100">
             
         </div>
     </div>
